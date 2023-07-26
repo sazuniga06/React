@@ -4,7 +4,6 @@ export const checkWinnerFrom = (boardToCheck) => {
     for(const combo of Winner_Combos)
     {
       const [a,b,c] = combo
-      
       if(
         boardToCheck[a] &&
         boardToCheck[a] == boardToCheck[b] &&
