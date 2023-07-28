@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import confetti from 'canvas-confetti'
 import { Square } from "./Components/Square.jsx"
 import { Turns } from "./Components/Constants.jsx"
@@ -52,6 +52,10 @@ function App() {
       setWinner(false) //empate
     }
   }
+
+  useEffect(() => {
+    console.log('UseEffect')
+  }, [winner])
 
   return (
     <main className="board">
