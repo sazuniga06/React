@@ -1,0 +1,47 @@
+Para acceder a react sin usar la plantilla de VITE se debe hacer lo siguiente:
+
+crear el proyecto:
+-npm create vite@latest
+-name project
+-Vanilla - Javascript
+-cd project
+-npm install @vitejs/plugin-react -E
+npm install react react-dom -E
+
+ahora creamos la configuracion de vite
+vite.config.js
+	-import { defineConfig } from "vite"
+	-import react from '@vitejs/plugin-react'
+	-export default defineConfig({
+		plugins: [react()]
+	 })
+
+ahora vamos al main.js y lo configuramos
+	import { createRoot } from 'react-dom/client'
+	const root = createRoot(document.getElementById('app'))
+	root.render(<h1>Hello World!</h1>)
+
+cambiamos la extension de main a .jsx y lo reemplazaos en html
+
+implementar eslint
+npm install standard´-D
+
+package.json 
+,
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+
+finalmente creamos la carpeta src
+y creamos la app App.jsx
+
+export function App(){
+    return(
+        <h1>Hello World!</h1>
+    )
+}
+
+y lo importamos dentro del main.jsx
+import { App } from './src/App'
+root.render(<App/>)
+
