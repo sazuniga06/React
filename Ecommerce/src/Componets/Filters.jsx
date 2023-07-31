@@ -1,21 +1,23 @@
-import { useState } from 'react'
+import {useId} from 'react'
 import './Filters.css'
+import { useFilters } from '../hooks/useFilters';
 
 // eslint-disable-next-line react/prop-types
-export function Filters({ onChange }) {
+export function Filters() {
 
-    const [minPrice, setMinPrice] = useState(0); // Rename 'setPrice' to 'setMinPrice'
+    const { filters, setFilters } = useFilters()
+    const minPriceFilterId = useId()
+    const CategoryFilterId = useId()// Rename 'setPrice' to 'setMinPrice'
   
     const handleChangeMinPrice = (event) => {
-      setMinPrice(event.target.value); // Update 'setPrice' to 'setMinPrice'
-      onChange(prevState => ({
+      setFilters(prevState => ({
         ...prevState,
         minPrice: event.target.value
       })) 
     }
   
     const handleChangeCategory = (event) => {
-      onChange(prevState => ({
+      setFilters(prevState => ({
         ...prevState,
         category: event.target.value
       }))
@@ -27,17 +29,17 @@ export function Filters({ onChange }) {
           <label htmlFor='price'> Precio </label>
           <input
             type='range'
-            id='price'
+            id={minPriceFilterId}
             min='0'
             max='1000'
-            value={minPrice} // Add 'value' attribute to the input
+            value={filters.minPrice} // Add 'value' attribute to the input
             onChange={handleChangeMinPrice}
           />
-          <span>${minPrice}</span>
+          <span>${filters.minPrice}</span>
         </div>
         <div>
-          <label htmlFor="category"> Categoria </label>
-          <select id='category' onChange={handleChangeCategory}>
+          <label htmlFor={CategoryFilterId}> Categoria </label>
+          <select id={CategoryFilterId} onChange={handleChangeCategory}>
             <option value='all'> Todas </option>
             <option value='home-decoration'> Decoracion para el hogar </option>
             <option value='laptops'> Computadoras </option>
