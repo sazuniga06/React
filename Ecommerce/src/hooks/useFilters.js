@@ -1,21 +1,20 @@
-import { useContext } from "react"
-import { FiltersContext } from "../Context/filters"
-export function useFilters(){
+import { useContext } from 'react'
+import { FiltersContext } from '../context/filters.jsx'
 
-    const {filters,setFilters} = useContext(FiltersContext)
-  
-  
-    const filterProducts = (products) => {
-      return products.filter(product => {
-        return (
-          product.price >= filters.minPrice &&
-          (
-            filters.category == 'all' ||
-            product.category == filters.category
-          )
+export function useFilters () {
+  const { filters, setFilters } = useContext(FiltersContext)
+
+  const filterProducts = (products) => {
+    return products.filter(product => {
+      return (
+        product.price >= filters.minPrice &&
+        (
+          filters.category === 'all' ||
+          product.category === filters.category
         )
-      })
-    }
-  
-    return {filters, filterProducts, setFilters}
+      )
+    })
   }
+
+  return { filters, filterProducts, setFilters }
+}
