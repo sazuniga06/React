@@ -1,14 +1,15 @@
+/* Estilos para el elemento 'body' */
 body {
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(135deg, #f0e446, #ff933a);
-  color: #070707;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0; /* Eliminamos el margen exterior predeterminado del cuerpo del documento */
+  padding: 0; /* Eliminamos el relleno predeterminado del cuerpo del documento */
+  background-image: linear-gradient(135deg, #f0e446, #ff933a); /* Fondo con un degradado lineal (gradiente) en un ángulo de 135 grados */
+  color: #070707; /* Color de texto oscuro para un buen contraste con el fondo */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif; /* Fuente utilizada, Montserrat es la fuente preferida, si no está disponible se usará Arial o Helvetica */
 }
 
+/* Estilos para el elemento con el ID 'root' */
 #root {
-  margin: 0 10px;
-  position: relative;
-  min-height: 95vh;
+  margin: 0 10px; /* Margen izquierdo y derecho de 10px para separar el contenido del borde de la ventana */
+  position: relative; /* Establecemos la posición del elemento como relativa */
+  min-height: 95vh; /* Altura mínima del elemento para que ocupe al menos el 95% de la altura visible (viewport height) */
 }
-

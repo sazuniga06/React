@@ -1,0 +1,47 @@
+/* Estilos para los iconos */
+
+/* Estilos base para todos los iconos */
+.Icon {
+  cursor: pointer; /* Cambiar el cursor al pasar por encima del icono */
+  display: flex; /* Uso de flexbox para centrar el contenido */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  height: 36px; /* Altura del icono */
+  width: 36px; /* Anchura del icono */
+  font-size: 20px; /* Tamaño de la fuente */
+  font-weight: 700; /* Grosor de la fuente (negrita) */
+}
+
+/* Estilos para el icono de marca de verificación (check) */
+.Icon-check {
+  position: absolute; /* Posicionamiento absoluto */
+  left: 8px; /* Distancia desde el borde izquierdo */
+}
+
+/* Estilos para el icono de marca de verificación activo (cuando la tarea está completada) */
+.Icon-check--active {
+  color: #4caf50; /* Color del icono cuando está activo (completado) */
+}
+
+/* Estilos para el icono de eliminar tarea */
+.Icon-delete {
+  position: absolute; /* Posicionamiento absoluto */
+  top: -16px; /* Distancia desde el borde superior */
+  right: 8px; /* Distancia desde el borde derecho */
+}
+
+/* Estilos para el icono SVG (usado para iconos con imágenes SVG) */
+.Icon-svg {
+  width: 24px; /* Anchura del icono SVG */
+  height: 24px; /* Altura del icono SVG */
+}
+
+/* Estilos cuando se pasa el cursor por encima del icono de eliminar */
+.Icon-delete:hover .Icon-svg {
+  fill: red; /* Cambiar el color de relleno del icono SVG a rojo al pasar el cursor por encima */
+}
+
+/* Estilos cuando se pasa el cursor por encima del icono de marca de verificación */
+.Icon-check:hover .Icon-svg {
+  fill: #4caf50; /* Cambiar el color de relleno del icono SVG al verde de marca de verificación al pasar el cursor por encima */
+}

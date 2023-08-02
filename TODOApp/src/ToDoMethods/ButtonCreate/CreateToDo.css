@@ -1,0 +1,30 @@
+/* Estilos para el botón de creación de ToDo */
+
+/* Estilos base del botón */
+.ButtonCreateToDo {
+  background-color: #fceb51d5; /* Color de fondo */
+  box-shadow: 0 8px 30px rgba(238, 13, 13, 0.795); /* Sombra del botón */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma redonda (círculo) */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  font-size: 50px; /* Tamaño de la fuente */
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 24px; /* Margen inferior */
+  right: 24px; /* Margen derecho */
+  font-weight: 700; /* Grosor de la fuente */
+  color: #fafafa; /* Color del texto */
+  display: flex; /* Uso de flexbox para centrar el contenido verticalmente */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  height: 64px; /* Altura del botón */
+  width: 64px; /* Anchura del botón */
+  transform: rotate(0); /* Rotación inicial del botón */
+  transition: 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+/* Estilos al pasar el cursor por encima del botón */
+.ButtonCreateToDo:hover {
+  transform: rotate(224deg); /* Rotación del botón en el estado :hover */
+  /* Agregamos una sombra para dar profundidad */
+  box-shadow: 0 8px 30px rgba(238, 13, 13, 0.795);
+}

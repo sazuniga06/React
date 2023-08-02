@@ -1,10 +1,10 @@
 /* Estilos para el elemento que contiene cada ToDo */
 .TodoItem {
   background-color: #ffcc80; /* Cambiamos el color del fondo a un tono más atractivo */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative; /* Posicionamiento relativo */
+  display: flex; /* Uso de flexbox para centrar el contenido */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
   margin-top: 20px; /* Reducimos el margen superior para que se vea más compacto */
   box-shadow: 0 3px 10px #c512127e; /* Reducimos la sombra para que se vea más suave */
   border-radius: 15px; /* Reducimos el tamaño de los bordes redondeados */
@@ -13,47 +13,20 @@
   color: #000000; /* Cambiamos el color del texto a blanco */
 }
 
+/* Estilos al pasar el cursor por encima del elemento */
 .TodoItem:hover {
   transform: translateY(-2px); /* Al pasar el ratón por encima, elevamos ligeramente el elemento */
 }
 
+/* Estilos para el párrafo dentro del elemento ToDo */
 .TodoItem-p {
   margin: 10px 0 10px 20px; /* Ajustamos el margen para un mejor espaciado */
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
+  font-size: 18px; /* Tamaño de la fuente */
+  line-height: 24px; /* Altura de línea */
+  font-weight: 400; /* Grosor de la fuente (normal) */
 }
 
+/* Estilos para el párrafo cuando la tarea está completada (marcada como completada) */
 .TodoItem-p--complete {
-  text-decoration: line-through;
-}
-
-.Icon {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px; /* Reducimos el tamaño del icono */
-  width: 36px; /* Reducimos el tamaño del icono */
-  font-size: 20px; /* Reducimos el tamaño del icono */
-  font-weight: 700;
-}
-
-.Icon-check {
-  position: absolute;
-  left: 8px; /* Ajustamos la posición del icono de verificación */
-}
-
-.Icon-check--active {
-  color: #4caf50;
-}
-
-.Icon-delete {
-  position: absolute;
-  top: -16px; /* Ajustamos la posición del icono de eliminar */
-  right: 8px; /* Ajustamos la posición del icono de eliminar */
-}
-
-.Icon-delete:hover {
-  color: red;
+  text-decoration: line-through; /* Agregamos una línea tachada al texto */
 }

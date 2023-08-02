@@ -1,0 +1,6 @@
+/* Estilos para la lista que contiene las tareas (ToDoList) */
+.TodoList {
+  margin: 0; /* Eliminamos el margen exterior */
+  padding: 0 0 56px; /* Agregamos un relleno inferior para separar las tareas del borde inferior */
+  list-style: none; /* Quitamos la viñeta de la lista, ya que no queremos mostrar viñetas */
+}

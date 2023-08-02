@@ -1,0 +1,31 @@
+/* Estilos para el contador de ToDos */
+
+/* Estilos base del contador */
+.Todo-Counter {
+  font-size: 24px; /* Tamaño de la fuente */
+  text-align: center; /* Centrar el texto horizontalmente */
+  margin: 30px; /* Margen exterior */
+  padding: 8px 16px; /* Relleno interior */
+  font-weight: 700; /* Grosor de la fuente (negrita) */
+  color: #333; /* Color del texto (gris oscuro) */
+  background-color: #ffe082; /* Color de fondo (amarillo claro) */
+  border-radius: 10px; /* Radio de borde (esquinas redondeadas) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del contador */
+  line-height: 1.4; /* Altura de línea */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Transiciones suaves */
+  font-family: 'Montserrat', sans-serif; /* Fuente utilizada ('Montserrat') */
+}
+
+/* Nueva clase para representar el color de fondo verde cuando todas las tareas estén completadas */
+/* Estilos de Material Design para el contador de ToDos con la clase 'all-completed' */
+.Todo-Counter.all-completed {
+  background: linear-gradient(135deg, #fda809, #dff70d); /* Degradado de colores (naranja a amarillo) */
+  color: rgb(0, 0, 0); /* Color del texto (negro) */
+  padding: 8px; /* Relleno interior */
+  border-radius: 4px; /* Radio de borde (esquinas redondeadas) */
+  font-weight: bold; /* Grosor de la fuente (negrita) */
+  text-align: center; /* Centrar el texto horizontalmente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del contador */
+  /* Se pueden agregar propiedades adicionales de Material Design aquí, si es necesario */
+}
