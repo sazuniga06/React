@@ -1,9 +1,14 @@
 // Importación del archivo de estilos CSS para el componente TodoCounter
+import { useContext } from 'react';
 import './TodoCounter.css';
-
+import { TodoContext } from "../../context"
 /* eslint-disable react/prop-types */
 // Componente funcional TodoCounter que muestra la cantidad de tareas completadas y el total de tareas
-export function TodoCounter({ Total, Completed }) {
+export function TodoCounter() {
+    const {
+        completedTodos: Completed,
+        totalTodos: Total,
+    } = useContext(TodoContext)
     // Mensaje de texto a mostrar dependiendo de si todas las tareas están completadas o no
     const completedText =
         Total === Completed

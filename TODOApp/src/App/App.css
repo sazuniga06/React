@@ -8,7 +8,7 @@
   background-image: linear-gradient(135deg, #f0e446, #ff933a); /* Fondo con un degradado lineal (gradiente) en un ángulo de 135 grados */
   color: #333; /* Color de texto oscuro para un buen contraste con el fondo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera para darle un aspecto más sutil */
-  border-radius: 8px; /* Reducción del radio del borde para una apariencia menos redondeada */
+  border-radius: 10px; /* Reducción del radio del borde para una apariencia menos redondeada */
   line-height: 1.6; /* Altura de línea para un espaciado adecuado entre líneas de texto */
   letter-spacing: 0.5px; /* Espaciado entre caracteres (letras) */
   transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Transiciones suaves para cambios de color y transformaciones */

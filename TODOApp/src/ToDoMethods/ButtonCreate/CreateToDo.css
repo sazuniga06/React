@@ -1,6 +1,4 @@
 /* Estilos para el botón de creación de ToDo */
-
-/* Estilos base del botón */
 .ButtonCreateToDo {
   background-color: #fceb51d5; /* Color de fondo */
   box-shadow: 0 8px 30px rgba(238, 13, 13, 0.795); /* Sombra del botón */
@@ -20,6 +18,12 @@
   width: 64px; /* Anchura del botón */
   transform: rotate(0); /* Rotación inicial del botón */
   transition: 0.3s ease; /* Transición suave de 0.3 segundos */
+  z-index: 1;
+}
+
+.ButtonCreateToDo.start {
+  bottom: 24px; /* Ajusta la distancia desde la parte inferior */
+  right:24px /* Ajusta la distancia desde la parte derecha */
 }
 
 /* Estilos al pasar el cursor por encima del botón */

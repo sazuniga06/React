@@ -1,0 +1,89 @@
+/* Estilos para el formulario de ToDo */
+.Form-ToDo {
+    background-image: linear-gradient(to top, rgba(205, 156, 242, 0.40) 0%, rgba(246, 255, 255, 0.71) 100%);
+    box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+    text-align: center;
+    border-radius: 5px;
+    margin: 3em auto;
+    background: rgba(255, 255, 255, 0.95);
+    height: 300px;
+    width: 480px;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para la etiqueta */
+  .Form-ToDo__Label {
+    background: linear-gradient(135deg, #f0e446, #ff933a);
+    /* Añade transparencia al texto */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Playfair Display', serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    letter-spacing: 2px;
+    font-size: 3.5em;
+    margin: 0;
+  }
+  
+  /* Estilos para el textarea */
+  .Form-ToDo__Textarea {
+    width: 100%;
+    max-width: 320px;
+    height: 120px;
+    text-align: center;
+    border-radius: 7px;
+    background: #eee;
+    padding: 1em 2em;
+    outline: none;
+    border: none;
+    color: #222;
+    transition: 0.3s linear;
+  }
+  
+  /* Estilos para el contenedor de botones */
+  .Form-ToDo__ButtonContainer {
+    display: flex;
+    justify-content: center; /* Centramos horizontalmente los botones */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  /* Estilos para el botón "Agregar" y el botón "Cancelar" */
+  .Form-ToDo__AddTodoButton,
+  .Form-ToDo__CancelButton {
+    background-image: linear-gradient(to left, #f0e446, #ff933a);
+    box-shadow: 0 9px 25px -5px #df91fb;
+    font-family: 'Abel', sans-serif;
+    padding: 0.5em 1.9em;
+    margin: 0.5em;
+    border-radius: 7px;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: 0.3s linear;
+  }
+  
+  /* Efecto de escala al interactuar con el formulario */
+  .Form-ToDo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Efecto de sombra al interactuar con los botones */
+  .Form-ToDo__AddTodoButton:hover,
+  .Form-ToDo__CancelButton:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -7,18 +7,26 @@ export function useLocalStorage(itemName, initialValue) {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-      // Intenta obtener el valor almacenado en el almacenamiento local para la clave 'itemName'
-      const localStorageItem = localStorage.getItem(itemName);
-      let parsedItem = JSON.parse(localStorageItem);
-
-      if (localStorageItem) {
-        setItem(parsedItem);
-      } else {
-        // Si no existe un valor almacenado, inicializa el almacenamiento local con 'initialValue'
-        localStorage.setItem(itemName, JSON.stringify(initialValue));
-        setItem(initialValue);
+      setTimeout(() => {
+        try{
+          // Intenta obtener el valor almacenado en el almacenamiento local para la clave 'itemName'
+          const localStorageItem = localStorage.getItem(itemName);
+          let parsedItem;
+          if (localStorageItem) {
+            parsedItem = JSON.parse(localStorageItem);
+            setItem(parsedItem);
+          } else {
+            // Si no existe un valor almacenado, inicializa el almacenamiento local con 'initialValue'
+            localStorage.setItem(itemName, JSON.stringify(initialValue));
+            setItem(initialValue);
+          }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        setLoading(false)
+      }catch(error){
+        setLoading(false)
+        setError(true)
       }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, 2000)
     }, []);
 
     // Función para guardar el nuevo valor de 'item' en el almacenamiento local

@@ -1,0 +1,31 @@
+/* Estilos para el componente TodosLoading */
+.todos-loading {
+  font-size: 60px;
+  font-weight: bold;
+  color: #FF5733; /* Un tono de naranja */
+  animation: spin 1s linear infinite;
+}
+
+/* Estilos para el componente TodosError */
+.todos-error {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FF0000; /* Rojo intenso */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregar sombra al texto */
+}
+
+/* Estilos para el componente TodosCreate */
+.todos-create {
+  font-size: 16px;
+  font-style: italic;
+  color: #32CD32; /* Un tono de verde */
+  background-color: #F0FFF0; /* Fondo casi blanco */
+  border: 2px solid #32CD32; /* Borde verde */
+  padding: 5px 10px; /* Agregar espacio interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

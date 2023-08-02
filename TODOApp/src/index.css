@@ -10,6 +10,6 @@ body {
 /* Estilos para el elemento con el ID 'root' */
 #root {
   margin: 0 10px; /* Margen izquierdo y derecho de 10px para separar el contenido del borde de la ventana */
-  position: relative; /* Establecemos la posición del elemento como relativa */
+  position: center; /* Establecemos la posición del elemento como relativa */
   min-height: 95vh; /* Altura mínima del elemento para que ocupe al menos el 95% de la altura visible (viewport height) */
 }

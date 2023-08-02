@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 // Importación del archivo de estilos CSS para el componente TodoSearch
+import { useContext } from "react";
 import "./TodoSearch.css";
-
+import { TodoContext } from "../../context";
 // Componente funcional TodoSearch que representa el cuadro de búsqueda de tareas
 // searchTerm: El término de búsqueda actual que se mostrará en el cuadro de texto.
 // setSearchTerm: Función para actualizar el término de búsqueda en el estado del componente padre.
-export function TodoSearch({ searchTerm, setSearchTerm }) {
+export function TodoSearch() {
+    const { searchTerm, setSearchTerm } = useContext(TodoContext)
+
     // Manejador de cambio para el cuadro de búsqueda
     const handleChange = (event) => {
         // Actualiza el término de búsqueda en el estado usando la función setSearchTerm

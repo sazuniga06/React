@@ -1,17 +1,24 @@
+/* eslint-disable react/prop-types */
 // Importación del archivo de estilos CSS para el componente CreateToDo
+import { useState } from "react";
 import "./CreateToDo.css";
 
-// Definición del componente funcional CreateToDo
-export function CreateToDo() {
-    // Función que se ejecuta cuando se hace clic en el botón
-    const handleClick = () => {
-        console.log("Click"); // Imprime "Click" en la consola
+export function CreateToDo({ setOpenModal }) {
+    const [isButtonClicked, setButtonClicked] = useState(false);
+  
+    const handleButtonClick = () => {
+      setOpenModal((state) => !state);
+      setButtonClicked(!isButtonClicked);
     };
 
+  
     // Retorno del componente con un botón que muestra un símbolo "+" y tiene una clase CSS "ButtonCreateToDo"
     return (
-        <button className='ButtonCreateToDo' onClick={handleClick}>
-            +
-        </button>
+      <button
+        className={`ButtonCreateToDo ${isButtonClicked ? "start" : ""}`}
+        onClick={handleButtonClick}
+      >
+        +
+      </button>
     );
-}
+  }
